@@ -50,7 +50,7 @@ AsyncTelegram2 bot(secure_client);
 const int BUZZER_PIN = 25;
 const int SERVO_PIN = 26;
 const int DOOR_SENSOR_PIN = 32;
-byte R_PINS[ROWS] = {21, 22, 5, 4}; // Pin Baris Keypad (Ganti!)
+byte R_PINS[ROWS] = {21, 22, 5, 4};
 byte C_PINS[COLS] = {2, 15, 18, 19};
 
 // --- NTP & TIME ZONE (WIB: UTC+7) ---
