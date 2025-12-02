@@ -146,6 +146,12 @@ DoorState TelegramHandler::readDoorState()
     return TERBUKA;
 }
 
+DoorState TelegramHandler::getDoorState()
+{
+    DoorState cur = readDoorState();
+    return cur;
+}
+
 void TelegramHandler::triggerDoorOpen(bool success)
 {
     if (!success)
@@ -163,15 +169,6 @@ void TelegramHandler::triggerDoorOpen(bool success)
 void TelegramHandler::runDoorLogic()
 {
     DoorState currentState = readDoorState();
-
-    if (currentState == TERBUKA)
-    {
-        Serial.println("TERBUKA");
-    }
-    else
-    {
-        Serial.println("TERTUTUP");
-    }
 
     switch (currentDoorActionState)
     {

@@ -60,7 +60,8 @@ void KeypadHandler::checkInput()
     if (key != NO_KEY)
     {
         buzzerHandlerPtr->beepKeypress();
-        Serial.print(key);
+        Serial.print("Input keypad: ");
+        Serial.println(inputCode);
 
         if (key >= '0' && key <= '9')
         {
@@ -75,6 +76,13 @@ void KeypadHandler::checkInput()
         else if (key == '#')
         {
             resetInput();
+        }
+
+        else if (key == '*')
+        {
+            DoorState current_state = telegramHandlerPtr->getDoorState();
+            Serial.print("Kondisi pintu saat ini: ");
+            Serial.println(current_state);
         }
     }
 }

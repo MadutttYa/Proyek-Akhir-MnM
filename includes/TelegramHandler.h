@@ -83,6 +83,7 @@ public:
     void triggerDoorOpen(bool success);
 
     void checkAuthTimeout();
+    DoorState getDoorState();
 };
 
 #endif

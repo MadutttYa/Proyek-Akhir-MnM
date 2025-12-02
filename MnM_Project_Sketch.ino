@@ -87,7 +87,7 @@ enum Mode
 Mode currentMode = BLE_MODE;
 
 const unsigned long BLE_SCAN_DURATION = 5000;     // 5 detik untuk scan BLE
-const unsigned long WIFI_CHECK_DURATION = 100000; // 1 Menit untuk aktif di mode WiFi
+const unsigned long WIFI_CHECK_DURATION = 100000; // Waktu untuk aktif di mode WiFi
 
 int64_t detectedUserTelegram = 0;
 
